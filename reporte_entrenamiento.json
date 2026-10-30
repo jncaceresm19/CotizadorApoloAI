@@ -1,0 +1,64 @@
+{
+  "material": {
+    "imagenes": 48,
+    "clases": [
+      "abs+",
+      "pla",
+      "pla+"
+    ],
+    "azar": 0.333,
+    "cv_media": 0.872,
+    "cv_desvio": 0.049,
+    "folds": [
+      0.909,
+      0.9,
+      0.9,
+      0.778,
+      0.875
+    ],
+    "matriz": [
+      [
+        9,
+        3,
+        2
+      ],
+      [
+        0,
+        15,
+        1
+      ],
+      [
+        0,
+        0,
+        18
+      ]
+    ]
+  },
+  "complejidad": {
+    "imagenes": 30,
+    "clases": [
+      "complejo",
+      "simple"
+    ],
+    "azar": 0.5,
+    "cv_media": 1.0,
+    "cv_desvio": 0.0,
+    "folds": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "matriz": [
+      [
+        15,
+        0
+      ],
+      [
+        0,
+        15
+      ]
+    ]
+  }
+}
