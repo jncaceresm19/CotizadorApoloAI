@@ -1,6 +1,6 @@
 fastapi==0.110.0
 uvicorn==0.27.1
-tflite-runtime==2.14.0
+ai-edge-litert
 pillow==10.2.0
 numpy==1.26.4
 python-multipart==0.0.9

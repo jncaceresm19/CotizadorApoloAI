@@ -3,16 +3,13 @@ import numpy as np
 from PIL import Image, ImageOps
 import io
 
-try:
-    import tflite_runtime.interpreter as tflite
-except ImportError:
-    import tensorflow.lite as tflite
+from ai_edge_litert.interpreter import Interpreter
 
 app = FastAPI(title="ApoloVibes Cotizador 3D")
 
 # --- CARGA MODELOS ---
 def cargar_modelo(path_modelo, path_clases):
-    interpreter = tflite.Interpreter(model_path=path_modelo)
+    interpreter = Interpreter(model_path=path_modelo)
     interpreter.allocate_tensors()
     with open(path_clases, "r") as f:
         clases = [c.strip() for c in f.read().split(",") if c.strip()]
