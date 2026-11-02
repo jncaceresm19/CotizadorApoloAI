@@ -24,12 +24,12 @@ PRECIO_KG_CLP = {"pla": 20000, "pla+": 22000, "abs+": 28000, "abs": 26000}
 FACTOR_OCUPACION = {"simple": 0.18, "medio": 0.32, "complejo": 0.48, "compleja": 0.48}
 CONFIG_USO = {
     "Decorativo": {"relleno": 0.15, "pared_mm": 1.2, "vel_g_h": 12.0, "merma_extra": 1.0},
-    "Funcional":  {"relleno": 0.40, "pared_mm": 2.0, "vel_g_h": 10.0, "merma_extra": 1.05},
+    "Funcional":  {"relleno": 0.25, "pared_mm": 2.0, "vel_g_h": 10.0, "merma_extra": 1.05},
     "Prototipo":  {"relleno": 0.15, "pared_mm": 1.2, "vel_g_h": 13.0, "merma_extra": 1.0},
-    "Exterior":   {"relleno": 0.60, "pared_mm": 2.4, "vel_g_h": 9.0,  "merma_extra": 1.1},
+    "Exterior":   {"relleno": 0.35, "pared_mm": 2.4, "vel_g_h": 9.0,  "merma_extra": 1.1},
     "Otro":       {"relleno": 0.30, "pared_mm": 1.6, "vel_g_h": 11.0, "merma_extra": 1.05},
 }
-COSTO_HORA_MAQUINA = 1800  
+COSTO_HORA_MAQUINA = 600 
 COSTO_BASE = 3500 
 TIEMPO_SETUP_H = 0.33
 
