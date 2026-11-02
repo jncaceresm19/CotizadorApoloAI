@@ -21,7 +21,7 @@ interpreter_comp, clases_comp = cargar_modelo("modelo_complejidad.tflite", "mode
 # --- CONFIGURACION REAL APOLOVIBES ---
 DENSIDAD_G_CM3 = {"pla": 1.24, "pla+": 1.24, "abs": 1.04, "abs+": 1.04}
 PRECIO_KG_CLP = {"pla": 20000, "pla+": 22000, "abs+": 28000, "abs": 26000}
-FACTOR_OCUPACION = {"simple": 0.28, "medio": 0.45, "complejo": 0.68, "compleja": 0.68}
+FACTOR_OCUPACION = {"simple": 0.18, "medio": 0.32, "complejo": 0.48, "compleja": 0.48}
 CONFIG_USO = {
     "Decorativo": {"relleno": 0.15, "pared_mm": 1.2, "vel_g_h": 12.0, "merma_extra": 1.0},
     "Funcional":  {"relleno": 0.40, "pared_mm": 2.0, "vel_g_h": 10.0, "merma_extra": 1.05},
@@ -120,7 +120,7 @@ async def cotizar(
     tiempo_total = tiempo_1 * cantidad
 
     precio_unit = int(gramos_1_pieza * costo_g + tiempo_1 * COSTO_HORA_MAQUINA + COSTO_BASE)
-    precio_total = int(gramos_total * costo_g + tiempo_total * COSTO_HORA_MAQUINA + COSTO_BASE * cantidad)
+    precio_total = int(gramos_total * costo_g + tiempo_total * COSTO_HORA_MAQUINA + COSTO_BASE)
     
     # Precio minimo $7000
     precio_unit = max(precio_unit, 7000)
