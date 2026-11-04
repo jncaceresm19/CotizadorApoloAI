@@ -1,4 +1,5 @@
 from fastapi import FastAPI, UploadFile, Form
+from fastapi.middleware.cors import CORSMiddleware
 import numpy as np
 from PIL import Image, ImageOps
 import io
@@ -6,6 +7,13 @@ import io
 from ai_edge_litert.interpreter import Interpreter
 
 app = FastAPI(title="ApoloVibes Cotizador 3D")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[""https://apolovibes3d.cl", "https://www.apolovibes3d.cl", "http://localhost:3000""],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # --- CARGA MODELOS ---
 def cargar_modelo(path_modelo, path_clases):
