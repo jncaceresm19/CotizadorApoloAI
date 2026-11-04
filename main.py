@@ -8,6 +8,10 @@ from ai_edge_litert.interpreter import Interpreter
 
 app = FastAPI(title="ApoloVibes Cotizador 3D")
 
+@app.get("/health")
+def health():
+    return {"status": "ok", "modelos": "cargados"}
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["https://apolovibes3d.cl", "https://www.apolovibes3d.cl", "http://localhost:3000"],
