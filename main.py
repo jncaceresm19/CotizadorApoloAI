@@ -10,7 +10,7 @@ app = FastAPI(title="ApoloVibes Cotizador 3D")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[""https://apolovibes3d.cl", "https://www.apolovibes3d.cl", "http://localhost:3000""],
+    allow_origins=["https://apolovibes3d.cl", "https://www.apolovibes3d.cl", "http://localhost:3000"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
